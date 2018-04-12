@@ -174,7 +174,7 @@ class Utils {
                         order: {
                             type: 'MARKET',
                             instrument: 'EUR_USD',
-                            units: lotSize * 100000 * (type === 'buy' ? 1 : -1)
+                            units: Math.round(lotSize * 100000) * (type === 'buy' ? 1 : -1)
                         }
                     },
                     body => {
