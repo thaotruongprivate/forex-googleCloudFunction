@@ -189,7 +189,8 @@ class Utils {
                                 type,
                                 price,
                                 takeProfit: tpAndSl.takeProfit,
-                                stopLoss: tpAndSl.stopLoss
+                                stopLoss: tpAndSl.stopLoss,
+                                lotSize
                             });
                         });
                     }
