@@ -9,19 +9,19 @@ This is a small project that I hosted as a Google Cloud Function to help me exec
 - create a Cloud Function with the source being that repository. The other way to source this function is Inline Editor, where you have to copy the content of index.js and package.json to the corresponding files
 - after this is done, you can make trade by sending POST request to the HTTP trigger URL
 - the POST body looks like this: 
-```
-{
-  "action": "", 
-  "baseUrl": "",
-  "accountId": "",
-  "apiKey": "",
-  "override": {
-    "risk": 0.01,
-    "stopLoss": 30,
-    "takeProfit": 40
+  ```
+  {
+    "action": "", 
+    "baseUrl": "",
+    "accountId": "",
+    "apiKey": "",
+    "override": {
+      "risk": 0.01,
+      "stopLoss": 30,
+      "takeProfit": 40
+    }
   }
-}
-```
+  ```
 - Param explanation:
   - action: "buy" or "sell"
   - baseUrl: the base URL of Oanda API, for example: "https://api-fxpractice.oanda.com/v3/accounts"
