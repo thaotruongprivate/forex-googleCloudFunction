@@ -3,7 +3,7 @@ OANDA FOREX TRADE MAKER
 
 This is a small project that I hosted as a Google Cloud Function to help me execute forex trades on OANDA. It only works when your target is Oanda's API.
 
-###How To Use
+# How To Use
 
 - upload this project to Cloud Source repository (or GitHub/BitBucket, but then you still need to clone it to Cloud Source Repository)
 - create a Cloud Function with the source being that repository. The other way to source this function is Inline Editor, where you have to copy the content of index.js and package.json to the corresponding files
