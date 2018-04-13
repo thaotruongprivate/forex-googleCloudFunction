@@ -1,15 +1,15 @@
 const request = require('request');
 
 class Utils {
-    constructor(apiKey, accountId, baseUrl) {
-        this.config = {
+    constructor(apiKey, accountId, baseUrl, override) {
+        this.config = Object.assign({
             risk: 0.05,
             stopLoss: 30,
             takeProfit: 40,
             apiKey,
             accountId,
             baseUrl
-        };
+        }, override);
 
         this.headers = {
             Authorization: `Bearer ${this._getConfig().apiKey}`,
@@ -20,7 +20,7 @@ class Utils {
     }
 
     _getConfig() {
-        return Object.assign(this.config);
+        return this.config;
     }
 
     _get(url, callback) {
@@ -234,7 +234,8 @@ exports.trade = (req, response) => {
                 const utils = new Utils(
                     req.body.apiKey,
                     req.body.accountId,
-                    req.body.baseUrl
+                    req.body.baseUrl,
+                    req.body.override
                 );
                 utils.makeTrade(req.body.action, (trade) => {
                     return response.status(200)
