@@ -40,4 +40,4 @@ This is a small project that I hosted as a Google Cloud Function to help me exec
     ```
     {"error":"Something is missing in the request"}
     {"error":"Wrong action"} // in case the action is neither "buy" nor "sell"
-    ```
+    ```# forexApp
