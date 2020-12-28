@@ -3,7 +3,7 @@ const request = require('request');
 class Utils {
     constructor(apiKey, accountId, baseUrl, override) {
         this.config = Object.assign({
-            risk: 0.05,
+            risk: 0.04,
             stopLoss: 30,
             takeProfit: 40,
             apiKey,
